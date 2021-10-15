@@ -47,5 +47,6 @@ int main() {
     printf("List of %d random NYC students in order from best to worst:\n", n);
     for (i = 0; i < n; i++) {
         print_record(school[i]);
+        free((void *) school[i]);
     }
 }
