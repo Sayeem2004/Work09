@@ -16,7 +16,7 @@ void print_record(struct student *s) {
 
 struct student *create_record(char *name, int grade, double gpa) {
     struct student *s = (struct student *) calloc(1, sizeof(struct student));
-    strncpy((char *)&(s->name), name, 20);
+    strncpy((char *)&(s->name), name, sizeof(s->name)-1);
     s->grade = grade;
     s->gpa = gpa;
     return s;
